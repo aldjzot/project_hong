@@ -13,15 +13,10 @@
         <table border="1" width="100%">
 
 
-          <colgeoup>
-
-
-          </colgeoup>
-
-
+          <colgroup>
+          </colgroup>
 
           <tbody>
-
 
               <tr>
                 <th><label for="userName">아이디</label></th>
@@ -31,13 +26,36 @@
 
               <tr>
                 <th><label for="userName">비밀번호</label></th>
-                <td><input type="text" id="userName"></td>
+                <td><input type="userpw" id="userName">
+                </td>
               </tr>
 
               <tr>
-                <label for="userpw">성별</label>
-
-
+                <th scope "row"><label for="man">성별</label>
+                </td>
+                <input type="radio" name="sex" id="man" /><label for="man">남자</label>
+                <input type="radio" name="sex" id="woman" /><label for="woman">여자</label>
+                <input type="radio" name="sex" id="bisexuality" /><label for="bisexuality">양성</label>
+              </td>
+            </tr>
+            <tr>
+              <label for="al">결혼여부</label>
+              <input type="checkbox" id="a1" name="al"/><label for="a1">미혼</label>
+              <input type="checkbox" id="a2" name="a2"/><label for="a2">기혼</label>
+              <input type="checkbox" id="a3" name="a3"/><label for="a3">앞으로 예정</label>
+              <input type="checkbox" id="a4" name="a4"/><label for="a4">못갈 것 같은 가면 로또</label>
+              <input type="checkbox" id="a5" name="a5"/><label for="a5">중혼</label>
+            </td>
+          </tr>
+          <tr>
+            <th scupe "row"><label for="a2">사진업로드</label></th>
+            <td><input type="file" id="photoUpload" />
+            </td>
+             </tr>
+             <tbody>
+               <input type="button" value="취소" />
+               <input type="submit" value="전송" />
+               <input type="reset" value="초기화" />
 
           </tbody>
         </table>
