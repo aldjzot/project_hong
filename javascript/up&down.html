@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+       
+        
+    var a = 10;
+    var b = 20;
+    var z = null
+    
+    function sum(){
+        z =a+b
+    }
+    
+    console.log(z)
+    
+    //결과는 null / sum을 호출을 안했기 때문에 연산이 되지 않음.
+    
+        // void 함수 : 연산하지 않고 실행만 함.
+    function sumv(x,y){
+        alert(x+y)
+    }
+        // 리턴함수 : 연산하는것
+    function sumr(x,y){
+        return x+y
+    }
+    sumv(200,100) alert()
+    alert(sumr(10,30)) 답 40
+    
+    var member = ["가""나""다""라"];
+    
+    function addUser(){
+        
+        var user = prompt("")
+        
+        var i=0; 
+        while(i<user){
+        var Userscore.push(Number("사용자 점수를 입력하세요")    
+        console.log(member)
+    }
+    
+    for(i=0;i>10;i++)
+    console.log(i)
+    
+    // 결과: x가 평균값을 갖게끔
+    
+    function avg(x){
+         var total = 0 ;
+        for ()
+        
+         total+= x[0]
+         total+= x[1]
+         total+= x[2]
+         total+= x[3]
+         total+= x[4]
+         total+= x[5]
+         
+         return total / x.length
+***********************************************
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <script type="text/javascript">
+    
+    var member = [];
+    var tt;
+    function addUser(){
+        
+        var user = prompt("사용자수를 입력하세요")
+        
+        var i=0;
+        while(i < user){
+             var userscore =  prompt("사용자 점수를 입력하세요")
+        
+             member.push(Number(userscore))    
+            i++
+        }
+        
+      tt =  avg(number)
+     }
+     
+     function avg(x){
+         
+         var total = 0;
+         
+        for(var i=0 in x){
+            total += x[i]    
+        }
+        
+       return total / x.length
+        
+     }
+
+
+
+
+</script>
+</head>
+<body>
+    <button onclick="addUser();">사용자 점수입력</button>
+    <button onclick="avg();">점수 계산 </button>
+</body>
+</html>
