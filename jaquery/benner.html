@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style type="text/css">
+    
+        .view img{position:absolute; width:500px; top:100px; left:0; display:none;}
+        .view img.on{display:block;}
+        .img{border:1px #F00 solid;}
+    </style>
+    
+    <script>
+    
+    // $(function(){                
+        
+    //   var idx = 0;
+    //   var slideWidth =$('.slide').width();
+       
+      
+    //   $('.next').click(function(){
+        
+    //     $('.slide li').eq(idx).removeClass('on').children('img').animate({
+    //         left:-slideWidth
+    //     }).parent().next().addClass('on').children('img').css({
+    //         'display':'block',
+    //         'left':slideWidth
+    //     }).stop().animate({
+    //         left:'0'
+    //     })
+        
+    //     idx++
+       
+    //     if(idx == $('.slide li').length){
+       
+    //         idx =0
+    //         $('.slide li').eq(idx).children('img').css({
+    //             'left':slideWidth
+    //         }).stop().animate({
+    //             'left':'0'
+    //         }).parent().addClass('on').siblings().removeClass('on')
+    //     }
+            
+    //   })
+      
+    //   $('.prev').click(function(){
+        
+    //     $('.slide li').eq(idx).children('img').animate({
+    //         left:slideWidth
+    //     }).parent().prev().children('img').css({
+    //         'display':'block',
+    //         'left':-slideWidth
+    //     }).stop().animate({
+    //         left:'0'
+    //     })
+        
+    //     idx--
+       
+    //     if(idx < 0){
+       
+    //         idx =$('.slide li').length-1
+    //         $('.slide li').eq(idx).children('img').css({
+    //             'left':-slideWidth,
+    //             'display':'block'
+    //         }).stop().animate({
+    //             'left':'0'
+    //         })
+    //     }
+            
+    //   })
+    
+    
+
+    
+    // })
+    
+    
+    
+    $(function(){
+        $('.controller a').click(function(){
+            var num = $(this).index();
+            console.log(num)
+            $('.view img').fadeOut()
+            $('.view img').eq(num).fadeIn(1000)
+        })   
+    })
+       
+      $fadeOut(function(){
+          $('.view img').eq(idx)
+          .addClass('on')
+          .fadeIn()
+          
+          
+          
+      })
+      
+        $(function() {
+        $('.controller a').click(function(){
+            var num = $(this).index();
+            console.log(num)
+            $('view img').fadeOut()
+            $('view img').eq(num).fadeIn()
+            })
+        })
+        
+        
+        
+        
+        
+        
+        
+      
+    </script>  
+      
+      
+                <!--// $('.view img') // 뷰안에 모든이미지선택해-->
+                <!--// .eq(hisidx) // 그중에 온클래스있는놈 선택해-->
+                <!--// .removeClass('on')//그놈 온클래스 지워-->
+                <!--// .fadeOut(function(){// 그리고 서서히 없어버려 -->
+                <!--// //없어지면...-->
+                <!--// $('.view img') //뷰안에 이미지-->
+                <!--// .eq(idx)// 현재 누른놈-->
+                <!--// .addClass('on') // 한테 on 클래스 붙여-->
+                <!--// .fadeIn();//나와.-->
+                <!--// });-->
+       
+
+    
+    
+    
+    
+</head>
+<body>
+    <div class="view">
+        <img src="img/img1.jpg" alt="" class="on">
+        <img src="img/img2.jpg" alt="">
+        <img src="img/img3.jpg" alt="">
+        <img src="img/img4.jpg" alt="">
+    </div>
+    
+     <div class="controller">
+         <a href="javascript:void(0)">1</a>
+         <a href="javascript:void(0)">2</a>
+         <a href="javascript:void(0)">3</a>
+         <a href="javascript:void(0)">4</a>
+     </div>
+</body>
+</html>
