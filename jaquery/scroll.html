@@ -8,37 +8,38 @@
     
     <script type="text/javascript">
         
-        // $(function(){ //실행하기
-        //     var bbb = []  //사진이미지 그릇에 담기
-        //     $('.section div').each(function(){  //div안에 section들을 각각 선택해서 실행해라 
-        //       bbb.push($(this).offset().top) //그릇에 담긴 사진들을 전체크기 top에서 사진 길이만큼 내려주기
-        //       console.log(bbb) // bbb를 뽑아내기
-        //     })
+        $(function(){ //실행하기
+            var bbb = []  //사진이미지 그릇에 담기
+            $('.section div').each(function(){  //div안에 section들을 각각 선택해서 실행해라 
+              bbb.push($(this).offset().top) //그릇에 담긴 사진들을 전체크기 top에서 사진 길이만큼 내려주기
+              console.log(bbb) // bbb를 뽑아내기
+            })
            
-        //   $('.nav li a ').click(function(){ // nav li a를 클릭 실행하라.
-        //         var aa = $(this).parent().index() // 변수 aa의 부모의 값을 알아내라.
-        //       console.log(aa) // aa를 뽑아내기
-        //       $('html,body').animate({ // html,body를 움직이기 
-        //           scrollTop:bbb[aa] // bbb와 aa를 합쳐서 스크롤 탑 하기
-        //       })
-        //   })
+          $('.nav li a ').click(function(){ // nav li a를 클릭 실행하라.
+                var aa = $(this).parent().index() // 변수 aa의 부모의 값을 알아내라.
+              console.log(aa) // aa를 뽑아내기
+              
+              $('html,body').animate({ // html,body를 움직이기 
+                  scrollTop:bbb[aa] // bbb와 aa를 합쳐서 스크롤 탑 하기
+              })
+          })
            
-        // })
+        })
         
         
-        $('.slide div li a').click(function)()({
-	idx = $(this).parent().index();
-	var hisidx = $('.slide div li.on').index()
-	
-	console.log(idx,hisidx)
+    //     $('.slide div li a').click(function)(){
+    // 	idx = $(this).parent().index();
+    // 	var hisidx = $('.slide div li.on').index()
+    	
+    // 	console.log(idx,hisidx)
+    
+    	
+    // 	return false;
+
 
 	
-	return false;
 
 
-	})
-
-})
         
     </script>
     

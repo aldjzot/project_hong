@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>    
+        
+        
+        var obj = {                     // json파일로 들어가게되면 var obj =가 빠지게됨 
+            "team1":[{
+                "userName":"장선경",
+                "pcNum":"01",
+                "class":"스마트 웹 컨텐츠"
+            },
+            {
+                "userName":"이고은",
+                "pcNum":"01",
+                "class":"스마트 웹 컨텐츠"
+            },
+            {
+                "userName":"이혜인",
+                "pcNum":"01",
+                "class":"스마트 웹 컨텐츠"
+            }],
+            "team2":[{
+                "userName":"장미래",
+                "pcNum":"01",
+                "class":"스마트 웹 컨텐츠"
+            },
+            {
+                "userName":"박하연",
+                "pcNum":"01",
+                "class":"스마트 웹 컨텐츠"
+            },
+            {
+                "userName":"최희지",
+                "pcNum":"01",
+                "class":"스마트 웹 컨텐츠"
+            }]
+
+
+        }
+        
+        
+        
+        
+        
+        // $(function(){
+            
+        //     console.log("for")
+        //     for(i=0; i < obj.team1.length; i++){
+        //         console.log(obj.team1[0].userName)
+        //     }    //for문은 obj의 랭스를 못뽑아서 obj를 각각의 배열에 담았다가 뽑아낸다.
+            
+        //     console.log("forin / obj")
+        //     for(var i = 0 in obj){
+        //         console.log(obj[i])
+                
+        //     }
+        
+        // })   
+        
+        
+        $(function(){
+        // each는 넣으면 바로 뽑을 수 있다. 
+        
+        $.getJSON('class.json',function(data){
+           //obj.team1는 $('data').children('team1').text() 이거랑 같다고 보면됨  
+        
+    
+            var table_element = ""
+        table_element +="<table>"
+                        
+        $.each(obj.team1,function(i,e){                       // e는 obj 임
+            table_element += "<tr>"
+            
+            $.each(e,function(j,f){                 //f는 obj안에 있는 각각
+                table_element +="<td>"
+                table_element +=f                     //f는 정보
+                table_element +="</td>"
+            })
+            table_element += "</tr>"
+        })
+        table_element +="</table>"
+        $('.table').html(table_element)
+    })
+
+})
+    </script>
+    
+    <style type="text/css">
+        .table{border:1px #F00 solid;width: 100%;}
+        .table tr,
+        .table td{border:1px #F00 solid;}
+    </style>
+</head>
+<body>
+</body>
+</html>

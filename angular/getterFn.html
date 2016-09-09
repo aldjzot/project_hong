@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>scope</title>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular.min.js"></script>
+    
+    <script>
+    
+        var getterCtrl = function($scope){
+            
+            $scope.getSum = function(){
+                
+                return $scope.name;             
+                                                // 리턴하는건 스툽인데 네임을 반환한다.    스콥안에 겟섬이랑 녀석이 있는데
+          }
+}
+    </script>
+    
+</head>
+<body ng-app>
+    <div ng-controller="getterCtrl">
+       say Hello to : <input type="text" ng-model="name"/><br/>
+       <h1>hello, {{getSum()}}</h1>
+       
+   </div>
+   
+   
+   
+</body>
+</html>

@@ -1,0 +1,296 @@
+ @import url(https://fonts.googleapis.com/css?family=Oswald&subset=latin,latin-ext);
+        
+        *{
+            margin: 0;
+            padding: 0; 
+            font-family: 'Nanum Gothic','monospace';
+            
+        }
+        body,html{height:100%;}
+        ul,ol{list-style:none;}
+        
+        .wrapper{
+            
+            height:100%;
+            background-image: url(../images/bg-pc.jpg);
+            background-repeat: no-repeat;
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-position: center top;
+            min-height:900px;
+        }
+        
+        .wrapper .logo{
+            
+            width: 320px;
+            height:320px;
+            background-image: url(../images/mainlogo.png);
+            position:absolute; top:10%;
+            margin: 11% 0 0 1%;
+            padding: 0;
+            transform:scale(0.9,0.9);
+            transition:1s;
+        }
+        
+        .wrapper .logo:hover{
+            
+            transform:scale(1.2,1.2);
+            opacity:0;
+        }
+        
+        .wrapper .header{
+            
+            position:fixed;
+            padding:0 30px;
+            box-sizing: border-box;
+            width:100%;
+            left:0;
+            top:0;
+            height:100px; 
+            background-color:rgba(255,255,255,0.7);
+            box-shadow:0 2px 5px #000;
+            transition:1s;
+            overflow:hidden;
+        }
+        
+        .wrapper .header .mark{
+            float:left;
+        }
+        
+        .wrapper .header .mark a{display:block; 
+            width: 104px; height:40px; padding:25px;
+            background-image: url(../images/logo-s.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            transition:1s;
+        }
+        .wrapper .header .mark a:hover{
+            transform:rotateY(180deg);
+            padding-bottom:5px;
+        }
+        
+        .wrapper .header .nav{
+            float:right;
+        }
+        
+        .wrapper .header .nav button{
+            display:none;
+
+        }
+        
+        .wrapper .header .nav ul{
+            font-size:0;
+            
+        }
+        
+        .wrapper .header .nav ul li{
+            display: inline-block;
+            font-size:12px;
+            vertical-align:top;
+            line-height:100px;
+            
+        }
+        
+        .wrapper .header .nav li a{
+            padding:0 15px;
+            display:block;
+            transition:0.3s;
+            text-decoration:none;
+            font-size:1.5em;
+            color:#08e9d1;
+            font-family: 'Oswald', sans-serif;
+        }
+        
+        .wrapper .header .nav li a:hover{
+            border-top:3px pink solid;
+            background-color:rgba(255,255,255,0.7);
+            color:pink;
+            
+        }
+        
+        .wrapper .footer{
+            width: 100%;
+            height: 57px;
+            position:fixed;
+            bottom:0;
+            z-index:1;
+        }
+        .wrapper .footer .jyplogo a{
+            position: relative;
+            display: block;
+            width: 115px;
+            height: 45px;
+            background:url(../images/jyplogo-b.png) no-repeat;
+            text-indent:-9999px;
+            top:5px;
+            left:7%;
+            float:left;
+        }
+        .wrapper .footer .snsicon{
+            position: relative;
+            display: block;
+            width: 200px;
+            height: 30px;
+            text-align:center;
+            top:15px;
+            right:3%;
+            float: right;
+        }
+        .wrapper .footer .snsicon a{
+            float: left;
+            width: 30px;
+            height: 30px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-color:#e4e4e4;
+            margin:0 10px 0 0;
+            border-radius:5px;
+            text-indent:-900em;
+            text-decoration:none;
+            position:relative;
+            display:inline-block;
+        }
+        .wrapper .footer .snsicon > .a_sb_instar{
+            background-image:url(../images/insta.png);
+        }
+        .wrapper .footer .snsicon > .a_sb_twitter{
+            background-image:url(../images/twitter_bird.png);
+        }
+        .wrapper .footer .snsicon > .a_sb_Facebook{
+            background-image:url(../images/facebook.png);
+        }
+        .wrapper .footer .snsicon > .a_sb_Youtube{
+            background-image:url(../images/youtube.png);
+        }
+        .wrapper .footer .snsicon > .a_sb_Fans{
+            background-image:url(../images/fans.png);
+        }
+        
+        
+        @media screen and (max-width:768px){
+            .wrapper{
+                background-image: url(../images/bg-720.jpg);
+                background-position: center center;
+                background-size:cover;
+                background-repeat:no-repeat;
+                width:100%;
+                position: absolute;
+                top:0;
+            }
+            
+            .wrapper .logo {
+                width: 250px;
+                height: 250px;
+                position: relative;
+                background-size:cover;
+                margin: 0 auto;
+                top:20%;
+                z-index: 0;
+                transition:1s;
+            }
+            
+            
+            .wrapper .header{
+                height:55px;
+                padding:0;
+                background-color:#FFF;
+                overflow:visible;
+                z-index: 3;
+            }
+            .wrapper .header .mark a{
+                
+                padding:0;
+                height:45px;
+                transform:scale(0.6,0.6);
+            }
+            .wrapper .header .mark a:hover{
+                
+                padding:0; height:44px;
+                transform:scale(0.6,0.6) rotateY(180deg);
+            }
+            
+            .wrapper .header .nav button{
+                display:block;
+                height:55px;
+                width: 150px;
+                border:0 none;
+                padding:0 10px;
+                line-height: 55px;
+                font-size:0.9em;
+                color:#fff;
+                background-color: rgb(8, 233, 209);
+                cursor:pointer;
+                font-family:'Oswald', sans-serif;
+            }
+            .wrapper .header .nav ul {
+                display:none;
+                width: 150px;
+                position:absolute;
+                background-color:rgba(255,255,255,0.6);
+                
+                
+            }
+            
+            .wrapper .header .nav ul li{
+                display: block;
+                width: 200px;
+                vertical-align:left;
+                line-height:40px;
+                font-size: 11px;
+            }
+            
+            .wrapper .header .nav li a:hover{
+                color:#ffb0b0;
+                border-top:0; 
+                border-left:3px #ffb0b0 solid;}
+            
+            .wrapper .footer{
+                transition:1s;
+                background-color:rgba(0,0,0,0.6);
+            }
+            
+        }
+            @media only screen and (max-width: 479px){
+                
+            .wrapper{
+                
+                background-image: url(../images/bg-720.jpg);
+                background-position: center center;
+                background-size:cover;
+                background-repeat:no-repeat;
+                min-height: 100%;
+                
+            }
+            
+            .wrapper .header {
+                z-index: 3;
+            }
+            
+            .wrapper .footer{
+                height: 37px;
+            }
+            .wrapper .footer .jyplogo a{
+                background-repeat: no-repeat;
+                background-position: 10% 5%;
+                background-size: 60%;    
+            }
+            .wrapper .footer .snsicon{
+                position:relative;
+                top:7px;
+                right:-9%;
+                height: 20px;
+                float:right;
+                transition:1s;
+                
+            }
+            .wrapper .footer .snsicon a{
+                width: 23px;
+                height: 23px;
+                background-size:90%;
+                background-repeat:no-repeat;
+                margin: 0 7px 0 0;
+            }
+                
+        }
+        
+ 

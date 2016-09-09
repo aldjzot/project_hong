@@ -1,0 +1,34 @@
+{                    
+            "team1":[{
+                "userName":"장선경",
+                "pcNum":"01",
+                "class":"스마트 웹 컨텐츠"
+            },
+            {
+                "userName":"이고은",
+                "pcNum":"01",
+                "class":"스마트 웹 컨텐츠"
+            },
+            {
+                "userName":"이혜인",
+                "pcNum":"01",
+                "class":"스마트 웹 컨텐츠"
+            }],
+            "team2":[{
+                "userName":"장미래",
+                "pcNum":"01",
+                "class":"스마트 웹 컨텐츠"
+            },
+            {
+                "userName":"박하연",
+                "pcNum":"01",
+                "class":"스마트 웹 컨텐츠"
+            },
+            {
+                "userName":"최희지",
+                "pcNum":"01",
+                "class":"스마트 웹 컨텐츠"
+            }]
+
+
+        }

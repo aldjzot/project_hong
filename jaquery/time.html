@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript">
+    
+    $(function(){
+        
+        var secondsArr = [];
+        var hoursArr = [];
+        var minutesArr = [];
+            
+        setInterval(function() {
+            var time = new Date();                              
+            var hours = time.getHours();
+            var minutes = time.getMinutes();
+            var seconds = time.getSeconds();
+            
+    
+            hours = arrPush(hours,hoursArr);
+            minutes = arrPush(minutes,minutesArr);
+            seconds = arrPush(seconds,secondsArr);
+            
+            timeprint()
+            
+            console.log(hours,minutes,seconds)
+            // var timeprint = hours%12 + ":"+ minutes+":" + seconds
+            
+            
+            
+        
+        $('.time').text(timeprint);
+        },1000);
+        
+        function timeprint(time,target){                    
+            target.children('span').each(function(i,e){                     
+                 $(e).text[i]                           
+                 
+            })
+       }
+        
+        
+        
+        // 시간 배열담은 결과 반환
+        
+        function arrPush(time,arr){
+                arr = [];
+                time = String(time);
+                
+                for(i=0; i < time.length; i++){
+                    arr.push(time.substring(i,i+1))
+                }
+            if(time >= 9){
+                time = "0"
+            }    
+                
+                return arr["1","2"] 
+            }
+        
+                
+        
+        })
+    
+        
+        
+    </script>
+    
+</head>
+<body>
+    <div class="time" style ="font-size:30px;">
+       </div> 
+    <div class="hours">
+        <span></span>
+        <span></span>
+    </div>
+    
+    <div class="minutes">
+        <span></span>
+        <span></span>
+    </div>
+    
+    <div class="seconds">
+        <span></span>
+        <span></span>
+    </div>
+    
+    
+</body>
+</html>

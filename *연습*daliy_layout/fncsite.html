@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FNC 엔터테인먼트</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style type="text/css">
+
+
+    *{
+        margin:0;
+        padding:0;
+    }
+    body,html{height: 100%;font-family: "Nanum Gothic", 나눔고딕, 돋움, Dotum, 굴림, Gulim, sans-serif;}
+    ul,ol,li>a{list-style:none;text-decoration:none;}
+    .wrapper{
+        height: 1100px;
+        border:1px #F00 solid;
+        background-image:url("http://www.fncent.com/layouts/default/image/common/back.gif");
+        background-repeat: repeat;
+        position:relative;
+            }
+    .header{
+        width: 100%;
+        height: 67px;
+        background-position: center;
+        background-image:url(http://www.fncent.com/layouts/default/image/common/header_bg.png);
+        border:1px #F00 solid;
+        margin-bottom: 56px;
+
+    }
+    .header .gnb{
+        position:absolute;
+        top:3%; left:40%;
+
+    }
+    .header .gnb li{
+        display:inline-block;
+        vertical-align:top;
+        line-height:100%;
+    }
+    .header .gnb li a{
+        color:white;
+        padding:0px 15px;
+        font-size: 15px;
+        text-decoration:none;
+        font-weight: bold;
+        display:block;
+        transition:0.3s;
+    }
+    .header .gnb li a:hover{
+        color:#F361A6;
+        border-top:3px #fff solid;
+        background-color: rgba(255,255,255,0.7);
+    }
+    .header .logo{
+        width: 75px;
+        height: 31px;
+        border:1px #F00 solid;
+        position:absolute; left:21%;top:2.5%;
+
+
+    }
+    .header .logo a{
+        transition:1s;
+    }
+    .header .logo a:hover{
+
+        display:block;
+        transform:scale(0.6,0.6)
+        rotateY(180deg);
+        padding-bottom:5px;
+    }
+    /*.wrapper .sidebar{
+        border:1px #F00 solid;
+        display: block;
+        height:36px;
+        text-indent: -9999px;
+        background-image:url(http://www.fncent.com/layouts/default/image/common/side_icon.png);
+        background-repeat:no-repeat;
+        float: right;
+    }*/
+
+    .mainimg{
+        width: 920px;
+        height: 518px;
+        border:1px #F00 solid;
+        margin:0 auto;
+
+        position:relative; top:150%;
+        background-image:url(http://fncent.com/files/2016/05/09/a0a3d1c1b819472915791c18da870c15000028.jpg);
+    }
+    .mainimg .prev{
+        width: 30px;
+        height: 52px;
+        border:1px #F00 border;
+        float: left;
+    }
+    .mainimg .next{
+        width: 30px;
+        height: 52px;
+        border:1px #F00 border;
+        float: right;
+    }
+    .wrapper .mainbox{
+        width: 920px;
+        height: 306px;
+        border:1px #F00 solid;
+        margin:0 auto;
+        overflow:hidden;
+
+    }
+
+    .wrapper .content_1{
+        width: 298px;
+        height: 306px;
+        border:1px #F00 solid;
+        padding:23 28px;
+        float:left;
+        background-color: #FFF;
+
+    }
+        .content_1 .ul>li{
+            position: relative;
+            width: 240px;
+            height: 37px;
+            border-bottom:1px #F00 solid;
+            vertical-align:top;
+        }
+           .content_1 .ul li>a{
+               max-width: 72%;
+               border-bottom:1px #CCC solid;
+
+           }
+            .wrapper .content_2{
+                width: 298px;
+                height: 306px;
+                border:1px #F00 solid;
+                padding:23 28px;
+                background-color: #FFF;
+
+
+            }
+                .wrapper .content_3{
+                    width: 298px;
+                    height: 306px;
+                    border:1px #F00 solid;
+                    padding:23 28px;
+                    background-color: #FFF;
+
+                }
+
+                .wrapper .footer{
+                    width: 536%;
+                    height: 132px;
+                    border: 1px #F00 solid;
+                    background-position: center;
+                    background-image:url(http://www.fncent.com/layouts/default/image/common/header_bg.png);
+                    position:relative;right:220%;
+                    bottom: 70%;
+                }
+
+            .content_1 h5>a{color: #000; text-decoration: none;}
+            .content_1 {line-height:30px;}
+            .content_1 ol+li{line-height:15px;}
+            .content_1 li a{font-size:13px;color: #666;max-height:72%;border-bottom:1px #CCC;}
+            .content_1 ol li{width:240px; border-bottom:1px #CCC solid;}
+            .content_1 ol span {font-size:10px;}
+            .data{text-align:right;}
+
+            .content_2 h5>a{color: #000; text-decoration: none;}
+            .content_2{line-height:30px;}
+            .content_2 li a{font-size:13px;color: #666;}
+            .content_2 ol li{width:240px;border-bottom:1px #CCC solid;}
+            .content_2 ol span {font-size:10px;text-align: right;}
+
+
+    </style>
+    <script type="text/javascript">
+        $(function(){
+            var idx = 0;
+            var slideWidth = $('.mainimg').width();
+
+        $('.next').click(function(){
+            ('.slide li').eq(idx).children('img').addclass('on').removeclass('on').css({
+                'display:block'
+                left:-slideWidth;
+        }).stop().animate()
+            })
+            
+            
+    
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <ul>
+                <li class"twitter"><a href="" title="트위터 새창열림" target="_blank"></a></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+                    </div>
+        <div class= "header">
+            <div class="logo">
+                <a href ="">
+                    <img src="http://www.fncent.com/layouts/default/image/common/logo.png"></a></img>
+                    </div>
+                    <div class="gnb">
+                        <ul>
+                            <li><a href="">COMPANY</a></li>
+                            <li><a href="">ARTISTS</a></li>
+                            <li><a href="">PR CENTER</a></li>
+                            <li><a href="">AUDITION</a></li>
+                        </ul>
+                    </div>
+    <div class="mainimg">
+      <div class="prev"></div>
+        <div class="next"></div>
+        </div>
+        <div class="mainbox">
+            <div class="content_1">
+                <h5>NOTICE</h5>
+                    <img src="http://www.fncent.com/layouts/default/image/main/main_h3_line.gif"></img>
+                <h5><a href="">[예약판매] ALBUM [Where’s the truth?] 예약판매 안내</a></h5>
+                <ol>
+                    <li><a href=""> ※앨범 본커버 이미지는 <13일 이후 공개됩니다.안녕하세요. FNC 엔터테인먼트&</a></li>
+                    <li><a href=""> [안내] FTISLAND 6th ALBUM </a><span class="data">16/07/08</span></li>
+
+                    <li><a href=""> [콘서트] 2016 FTISLAND LIVE </a><span class="data">16/07/04</span></li>
+
+                    <li><a href=""> [콘서트] 2016 FTISLAND 콘서트 선 </a><span class="data">16/06/28</span></li>
+
+                </ol>
+                <div class="content_2">
+                    <h5>NEW RELEASE</h5>
+                        <img src="http://www.fncent.com/layouts/default/image/main/main_h3_line.gif"></img>
+                            <ol>
+                                <li><a href="">AOA 4th Mini Album [Good] </a><span class="data">16/05/16</span></li>
+
+                                <li><a href="">AOA 4th Mini Album [Good] </a><span class="data">16/05/16</span></li>
+
+                                <li><a href="">CNBLUE 6TH MINI ALBUM </a><span class="data">16/04/19</span></li>
+
+                                <li><a href="">CNBLUE 6TH MINI ALBUM </a><span class="data">16/04/19</span></li>
+
+                                <li><a href="">AOA 지민(JIMIN) - 야 하고 싶 </a><span class="data">16/03/03</span></li>
+
+                                <li><a href="">AOA 크림(CREAM) - 질투 나요 BAB </a><span class="data">16/02/12</span></li>
+
+                            </ol>
+                    <div class="content_3">
+                        <img src="http://fncent.com/files/2016/05/16/71dcf9badb6932c471d19d8102924e4c104815.jpg"></img>
+                      </div>
+                <div class="footer">
+                  </div>
+
+    </div>
+</body>
+</html>

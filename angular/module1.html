@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular.min.js"></script>
+    
+    <script>
+        var app = angular.module('hello',[]);
+        
+        app.controller('HelloCtrl',function($scope){
+        
+            // $scope.name="world";
+            $scope.fristName = "민철";
+            $scope.listName = "김";
+            
+        })
+        
+    </script>
+    
+    
+</head>
+<body >
+    <div ng-app="hello">
+        <div ng-controller="HelloCtrl">
+            
+                <!--<input type="text" ng-model="name" />-->
+                <!--<h1>{{name}}</h1>-->
+                <!--<h1 ng-bind="name"></h1>-->
+                <!--<h1 data-ng-bind="name"></h1>-->
+                <!--<span>{{100+200}}</span>-->
+                
+                성 <input type = "text" ng-model = "listName" /><br/>
+                이름 <input type = "text" ng-model = "fristName" /><br/>
+                
+                <h1>{{listName + fristName}}</h1>
+            
+        </div>
+    </div>
+    
+    
+    
+    
+</body>
+</html>

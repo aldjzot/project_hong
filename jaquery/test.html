@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        // $(function(){
+        //     setTimeout(function(){
+        //         var value = $('select>option:selected').val();
+                
+        //     },5000);
+        // });
+        
+        $(function(){
+	  $('.facebookLink').click(function(){
+			var imgUrl = $('.facebookLink a:first').children('img').attr('src');
+		 	var Urlnotchange= imgUrl.replace( "_on.png","_off.png");
+		 	var Urlchange = imgUrl.replace("_off.png" , "_on.png");
+		 	
+		 	$( '.facebookLink a:first' ).children('img').toggleClass('on')
+		 	
+		 	if($( '.facebookLink a:first' ).children('img').is('.on')){
+		 		$('.facebookLink a:first').children('img').attr('src', Urlchange);
+		 		$('.facebookLink #facebook').css({
+		 			'display':'block'
+		 		}).slideDown()
+		 	}else{
+		 		$('.facebookLink a:first').children('img').attr('src', Urlnotchange)
+		 		$('.facebookLink #facebook').css({
+		 			'display':'none'
+		 		})
+		 	}
+			
+		})
+  })
+        
+    </script>
+</head>
+<body>
+    <select>
+            <option>Apple</option>
+            <option>Bag</option>
+            <option>Cat</option>
+            <option>Dog</option>
+            <option>Elephant</option>
+    </select>    
+</body>
+</html>

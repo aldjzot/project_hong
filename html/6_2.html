@@ -10,18 +10,22 @@
     }
     
     
-    .qorud{border:1px #F00 solid;
-           height:800px;
+    .qorud{
+           height:1000px;
            background-image:url(http://static.naver.net/newsstand/img/20121231/bg_bd.png);
-           
+        
+    }
+    .qorudtop{
+        width: 100%; height: 68px;
+        background-image:url(../images/bg_hd.png) no repeat;
+        padding-top: 5px;
     }
     
     
     .wrap{
         
-        width: 900px;
+        width: 920px;
         height: 540px;
-        border:1px #F00 solid;
         margin:0 auto;
         margin-top:60px;
         background-image:url(../images/bg_panel.png);
@@ -36,44 +40,43 @@
         width: 260px;
         height: 55px;
         margin:25px 0px 0;
-        border: 1px #F00 solid;float:left;
+       float:left;
         
     }
     .header .h-right{
         width: 468px;
         height: 60px;
-        border:1px #F00 solid;float:right;
+        float:right;
         margin:20px 0 10px 10px;
     }
     
     .header .h-content{
         width: 300px;
         height: 25px;
-        border:1px #F00 solid;
         clear:left;
         margin:0px;
     }
     .content{
         width: 840px;
         height: 380px;
-        border:1px #F00 solid;
         margin:0 auto;position:relative;
         
     }
     .c-lc{
         width: 606px;
         height: 373px;
-        border:1px #F00 solid;
         margin:2px ;
-        float:left;
+        
         
     }
-    ul{margin:0; padding:0; list-style:none;}
+    
+
+    
+    ul, ol {margin:0; padding:0; list-style:none; text-decoration:none;}
     
     .c-lc_1{
         width: 242px;
         height: 240px;
-        outline:1px #F00 solid;
         font-size:12px;
         float:right;
     }
@@ -83,8 +86,6 @@
         font-size:12px;
         
     }
-     li{list-style:none;}
-    
     .c-lc_3{
         width:117%;
         margin-left:120px;
@@ -119,10 +120,9 @@
     .bottom_c4{
         width: 117px;
         height: 110px;
-        
         position:relative;
         left:120px;
-        bottom:118px;
+        bottom:134px;
     }
     .bottom_c5{
         width: 117px;
@@ -130,16 +130,16 @@
         
         position:relative;
         left:120px;
-        bottom:117px;
+        bottom:133px;
     }
      
     .rc{
         width: 230px;
         height: 380px;
-        border:1px #F00 solid;
         position:relative;
         left:128px;
         bottom:380px;
+       margin-top:12px;
     }
     .rc_title
        {
@@ -147,23 +147,31 @@
         height: 20px;
         color:white;
         background-color:#000;
+        margin-bottom:5px;
     }
     .rc_title_s{
         width: 225px;
         height: 20px;
         background-color:#C71585;
         color:white;
+        margin-top:10px;
     }
     .rc_title_t{
         width: 225px;
         height: 20px;
         background-color:#191970;
         color:white;
+        margin-top:10px;
+        margin-bottom:5px;
     }
     .rc_title_i{
-        float: left;
+        overflow:hidden;
         display: inline block;
+        
     }
+    .rc_title_i > img {float:left;}
+    
+    
     
     
 
@@ -175,6 +183,7 @@
     
     <body>
     <div class="qorud">
+        <div class="qorudtop"></div>
         <div class="wrap">
             <div class="header">
             <div class="h-left"><img src="http://static.naver.net/newsstand/up/2016/0325/nsd185740259.png"></div>
@@ -187,29 +196,29 @@
         </div>
                 <div class="content">
                     <div class="c-lc">
-                        <img src="http://static.naver.net/newsstand/2016/0603/pressian/113209/001.jpg">
+                        <img src="../images/001.jpg" width=360px; height=240px; >
                         <div class="c-lc_1">
                           <div class="c-lc_2">
                             <ul>
                                         <li>
-                                            <span><img src="http://static.naver.net/newsstand/2016/0603/pressian/113209/002.jpg" alt="" width=117px height=80px;></img></span>
-                                            <br>고등어는 굽고 경유차<br>는 포기하면 안되나</br>
+                                            <span><img src="../images/002.jpg" alt="" width=117px; height=80px;></img></span>
+                                            <br>"만취한 '길'이 쌍욕...<br>리쌍이 날 가지고 놀았</br>
                                         </li>
                                         <li>
-                                            <span><img src="http://static.naver.net/newsstand/2016/0603/pressian/113209/004.jpg" alt="" width=117px height=80px;>
-                                            <br>차별금지법 반대가 <br>'동성애혐오' 아니라고</br>
+                                            <span><img src="../images/003.jpg" alt="" width=117px height=80px;>
+                                            <br>"중국,한국 겨냥해 핵<br>미사일 겨냥 할 수 있</br>
                                         </li>
                             </ul>
                             
                            <div class="c-lc_3">    
                             <ul>
                                         <li>
-                                            <span><img src="http://static.naver.net/newsstand/2016/0603/pressian/113209/003.jpg" alt="" width=117px height=80px;>
-                                            <br>"박근혜, 컵라면 소비가 <br>늘어나길 바라나?"</br>
+                                            <span><img src="../images/004.jpg" alt="" width=117px height=80px;>
+                                            <br>"망원동 카페가 원망스<br>럽습니다!."</br>
                                         </li>
                                         <li>
-                                            <span><img src="http://static.naver.net/newsstand/2016/0603/pressian/113209/005.jpg" alt="" width=117px height=80px;>
-                                            <br> "삼성 맞춤형 국민연금<br>국회 청문회 열자"</br>
+                                            <span><img src="../images/005.jpg" alt="" width=117px height=80px;>
+                                            <br> "박정희는 왜 총을 맞아<br>야 했나"</br>
                                         </li>
                             </ul>
                             </div>
@@ -217,43 +226,43 @@
                     <div class="bottom_c1">
                         <ul>
                                         <li>
-                                            <span><img src="http://static.naver.net/newsstand/2016/0603/pressian/192602/006.jpg" alt="" width=117px height=80px;>
-                                            <span>제2의 옥시사태,막을 수 없다.</span>
+                                            <span><img src="../images/006.jpg" alt="" width=117px height=80px;>
+                                            <span>개성공단 폐쇄, 중국 좋은 일만 했다.</span>
                                         </li>
                         </ul>                
                         <div class="bottom_c2">
                             <ul>
                                         <li>
-                                            <span><img src="http://static.naver.net/newsstand/2016/0603/pressian/192602/007.jpg" alt="" width=117px height=80px;>
-                                            <span>대북압박 일로매진 한국,"낙동강 오리알"되</span>
+                                            <span><img src="../images/007.jpg" alt="" width=117px height=80px;>
+                                            <span>박근혜 鉳 초선의원들에 싸움을 걸다</span>
                                         </li>
                         </ul>            
                            <div class="bottom_c3">
                                <ul>
                                         <li>
-                                            <span><img src="http://static.naver.net/newsstand/2016/0603/pressian/192602/009.jpg" alt="" width=117px height=80px;>
-                                            <span>미-러,미-중 '일촉즉발'...신냉전 화약고</span>
+                                            <span><img src="../images/008.jpg" alt="" width=117px height=80px;>
+                                            <span>김제동 사드 집회 발언 화제 "내가 종북 난?"</span>
                                         </li>
                         </ul> 
                                 <div class="bottom_c4">
                                     <ul>
                                         <li>
-                                            <span><img src="http://static.naver.net/newsstand/2016/0603/pressian/192602/009.jpg" alt="" width=117px height=80px;>
-                                            <span>'위험의 하청화'...청년 일용직만 죽어나가는</span>
+                                            <span><img src="../images/009.jpg" alt="" width=117px height=80px;>
+                                            <span>대통령의 '내시'이정현, 'TK비박' 주호영 넘</span>
                                         </li>
                         </ul>
                                     <div class="bottom_c5">
                                         <ul>
                                         <li>
-                                            <span><img src="http://static.naver.net/newsstand/2016/0603/pressian/192602/010.jpg" alt="" width=117px height=80px;>
-                                            <span>서울 메트로 "작업일지 조작 지시"시인</span>
+                                            <span><img src="../images/010.jpg" alt="" width=117px height=80px;>
+                                            <span>더민수 "박원순 시장 당선 후에도 공작 지"</span>
                                         </li>
                         </ul>            
                 <div class="rc">
                     <div class="rc_title">
                     <h3>[뉴스클립]</h3>
                     </div>
-                    <ol type="1">
+                    <ol>
                       <a href="">
                         <li>① 이해찬,반기문 겨냥"외교관,정치</li>
                         <li>② 韓-쿠바 첫 외교 장관 회담…한국</li>
@@ -270,13 +279,13 @@
                     <div class="rc_title_s">    
                         <h3>[오늘의 이슈]</h3>
                     </div>
-                    <h2>곡성공무원의 비극,뒤에는악 </h2>
-                    <li>[기자의 눈]각자 도생은 불가능하다.</li>
+                    <h2>유승민 차 한잔 하자니 청와대</h2>
+                    <li>"반기문 새누리 경선 참여 환영, 안철수</li>
                     <div class="rc_title_t">
                         <h3>[오늘의 서평]</h3>
                     </div>    
-                    <div class="rc_title_i">  <img src="http://static.naver.net/newsstand/2016/0606/pressian/193804/011.jpg" alt="" width=46px height=66px;>
-                                                <span><h4>왜 남자는 포르노에 환장할까?</h4></span>[프레시안 books]<본성이 답이다>
+                    <div class="rc_title_i"><img src="../images/011.jpg" alt="" width=46px height=66px;>
+                                                <span><h4>"박근혜, '세월호'와 '헬조선'으로 기억될 정치인"</h4></span>[프레시안 books]<본성이 답이다>
                     </div>            
           
             

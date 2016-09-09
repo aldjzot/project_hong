@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+    $(function(){
+        
+         var openPopup = function(){
+             
+             
+             
+             
+         }
+        
+        
+        function popMaker(id){
+            
+            var tag = "";
+            tag+='<div class="popup '+id+'">';
+            tag+='<button class="closebtn">닫기</button>
+            tag+='<div class="content">';
+            tag+=content;
+            tag+='</div>'
+            tag+='</div>'
+            
+            $('body').append(tag);
+            centerPosition($('.'+id));
+        }
+        
+        var blind = function(){
+            var bI_tag = "";
+            
+            bI_tag+='<div class="blind">';
+            bI_tag+='<'/div'>'
+
+            $('body').prepend(bI_tag);
+            
+            $('.blind').css({
+                position:'absolute'
+            })
+
+
+
+
+
+
+
+        }
+        
+        
+        
+    })
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </script>
+    <style type="text/css">
+        .popup{
+            width: 500px; height: 500px; 
+            background-color:#fff;
+            position:absolute;
+            top:30%;
+            left:40%;
+            z-index:1;
+            display:none;
+        }
+        .blind{
+            position:'absolute';
+            background-color:'#000';
+            left:0;
+            right:0;
+            bottom:0;
+            display:none;
+        }
+        
+        .pop1{width:600px; height:600px; display:none;}
+        .pop2{width:200px; height:200px; display:none;}
+        .pop3{width:300px; height:600px; display:none;}
+        .pop4{width:700px; height:600px; display:none;}
+        
+        .popup.pop1 .wrap{color:#F00;}
+        .popup.pop2 .wrap{color:#FF0;}
+        .popup.pop3 .wrap{color:#F0F;}
+        .popup.pop4 .wrap{color:#0F0;}
+        
+    
+    </style>
+</head>
+<body>
+    
+    <button class="open">열어</button>
+    <!--                                                        //open 이란 class 하나만 있으면 모든걸 불러올수있게 하는것.후에-->
+    <div class="popup">                                         //에서 div를 지워준다.
+            <button class="closebtn">닫기</button>
+            
+            <button class="open" id= "pop1">열어</button>
+            <button class="open" id= "pop1">열어</button>
+            <button class="open" id= "pop1">열어</button>
+            <button class="open" id= "pop1">열어</button>
+            
+            <div class="pop1">
+                <div class="wrap">
+            <button>확인</button>
+            AAAA
+            </div>
+        </div>
+        <div class="pop2"> 
+        <div class="wrap">
+            BBBB
+            <button>확인</button>
+         </div>  
+    </div>
+    <div class="pop3"> 
+        <div class="wrap">
+            CCCC
+        <button>확인</button>
+         </div>  
+    </div>
+    <div class="pop4"> 
+        <div class="wrap">
+            DDDD
+        <button>확인</button>
+         </div>  
+    </div>
+    
+</body>
+</html>

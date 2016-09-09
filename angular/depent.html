@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script>
+        
+        var worldCtrl = function($scope){
+            
+            $scope.pupulation = 6000000000;
+            $scope.countries =                                  //원래 실무는 html->abc.json->php/asp->db 안에 넣는다.// 
+                                                                    //앙귤러로 인해 프론트나 백이 나눠진다.//
+            
+            [
+                {"name":"한국","pupulation":70000000},
+                {"name":"중국","pupulation":1300000000},
+                {"name":"일본","pupulation":200000000},
+                
+            ]                             
+            $scope.asianPercentage = function(countrypopulation){                                                    // 배열안의 객체
+                return (countrypopulation / $scope.population) * 100;
+            }
+        
+        
+        }
+        
+        
+    </script>
+    
+</head>
+<body ng-app>
+    
+    <div ng-controller="worldCtrl">
+        
+        <ul ng-repeat="country in countries">                    <!--contry in countries을 반복하라-->
+                                                                                        <!--in만 명령어이고 규칙이다.-->
+            <li>나라: {{country.name}}, 의 인구는 {{country.pupulation}} 퍼센트 이다.</li>
+        </ul>    
+            <p>동양인의 인구는 {{pupulation}} 이다.</p>
+        </div>
+</body>
+</html>

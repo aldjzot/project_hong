@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        
+            $(function(){
+            
+            var secondsArr = [];                    //변수 선언
+            var hoursArr = [];
+            var minutesArr = [];
+            
+            setInterval(function(){
+                var time = new Date();                      //데이터 객체생성
+                var hours = time.getHours();                //시간저장
+                var minutes = time.getMinutes();            //분저장
+                var seconds = time.getSeconds();        // 초저장
+                
+                hours = arrPush(hours,hoursArr);                // 변수 변경
+                minutes = arrPush(minutes,minutesArr);
+                seconds =arrPush(seconds,secondsArr);
+                
+                timeprint(hours,$('.hours'))
+                timeprint(minutes,$('.minutes'))
+                timeprint(seconds,$('.seconds'))
+                
+            //     var timePrint = hours%12 +":"+ minutes+":"+ seconds
+            //     $('.time').text(timePrint);
+            // },1000);
+            
+            function timeprint(time,target){
+                target.children('span').each(function(i,e){                                 //    i = index ,e =this 
+                    $(e).css({                                                          // time의 i숫자를 넘버형으로 바꿔서 곱하기 100을 한다.
+                        'background-position-Y': -1*(Number(time[i] * 100)) + 'px'         // 백그라운드 포지션 하고는 띄어쓰기를 해야함.                               // 글씨가 출력되는 부분
+                })  
+                 
+                  })                        //텍스트를 css로                             
+            }                       // -를 준 이유는 위로 올리기 위해.
+            
+            
+                if('.seconds' >= 20){
+                    $('body').css({
+                        'background':'red'
+                    })
+        
+                }else if('.seconds' <= 40){
+                    $('body').css({
+                        'background':'blue'
+               })   
+            
+                } console.log('.seconds')
+            
+            
+            //시간 배열담은 결과 반환
+            function arrPush(time,arr){
+                arr = [];
+                
+                if(time <= 9){
+                    time = "0"+time;
+                }
+                
+                time = String(time);
+                for(i=0; i < time.length; i++){
+                    arr.push(time.substring(i,i+1))
+                }
+                return arr
+            }
+            
+            
+            
+        })
+         
+        
+            }) 
+    </script>
+    
+    <style>
+        body{background:black; color:#FFF;}
+        body div div{display:inline-block;}
+        body span{display:inline-block; border:1px #F00 solid;
+        text-indent:-9999px;
+            width:42px; height:60px;        
+            background-image:url(./img/txt-num.png);
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+    <div class="time" style="font-size:30px;">
+        <div class="hours">
+            <span></span>
+            <span></span>
+        </div>
+        
+        <div class="minutes">
+            <span></span>
+            <span></span>
+        </div>
+        
+        <div class="seconds">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</body>
+</html>

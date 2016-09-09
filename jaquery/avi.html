@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style type="text/css">
+        *{
+            margin:0; padding:0;}
+            ul{margin:0; padding:0; list-style:none;}
+            .view{margin:0 auto; width: 660px;}
+            .list li{width: 150px; display:inline-block;}
+            .list li img{width: 100%;}
+            
+            
+    </style>
+    <script type="text/javascript">
+        $(function(){
+            
+            
+            
+            $('.list li a').click(function(){
+                console.log('ddddd')
+                var url = $(this).attr('href');
+                var location ='https://www.youtube.com/embed/'+url+'?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" class="view" allowfullscreen'    
+                
+                $('.view iframe').attr('src',location);
+                
+               return false; 
+            });
+        })
+        
+        
+        
+        
+        
+        
+    </script>
+
+</head>
+<body>
+    <div class="view">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Ur3vPwELd_c?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" class="view" allowfullscreen></iframe>
+        </div>
+    
+    <ul class="list">
+        <li><a href="Ur3vPwELd_c"><img src="./img/cat_!.jpg" alt=""></a></li>
+        <li><a href="z2t4TsGFuwo"><img src="./img/cat_1.png" alt=""></a></li>
+        <li><a href="ziAJujCeSZ4"><img src="./img/cat_2.png" alt=""></a></li>
+    </ul>
+</body>
+</html>

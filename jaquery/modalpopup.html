@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+    $(function(){
+       //장막이벤트내용
+                                                            //open 이란 class 하나만 있으면 모든걸 불러올수있게 하는것.후에
+      var openPopup = function(){                       //var 옆에 blind를 openPopUp로 바꿔준다.
+          
+          blindFn();                // 막생성
+            
+          popMaker();               // 팝생성 //팝위치
+              $('.popup').show(1000);           //보여주기
+      } 
+      
+      function popMaker(id){                  //open 이란 class 하나만 있으면 모든걸 불러올수있게 하는것.후에  // popmaker를 실행할때 id를 실행한다.
+                                                                // 밑에 div를 지우고 popMaker를 만들어준다.
+        //   var contents = $('.'+id').html();                      // 컨텐츠는 class랑 id의 html을 같이불러온다                                                        
+          
+          var tag = "";
+          tag+='<div class="popup '+id+'">';
+          tag+='<button class="closebtn">닫기</button>';
+          tag+='<div class="content">';
+          tag+=content;
+          tag+='</div>';
+          tag+='</div>';
+          
+          $('body').append(tag);
+          centerPosition($('.'+id));          // 팝업이 인자로 들어온다.(팝업의 css를 불러온다) // class와 id를 같이 합친다.
+      }
+      
+      var blind = function(){
+          var bl_tag = "";
+           
+          bl_tag+= '<div class="blind">';           
+          bl_tag+= '</div>';
+           
+          $('body').prepend(bl_tag);
+           
+           //장막생성 스타일
+           $('.blind').css({
+               position:'absolute',
+               backgroundColor:'#000',
+               left:0,                      // 이부분은 그냥 css로 줘도된다.
+               right:0,
+               top:0,
+               bottom:0,
+               'display':'none'
+               
+               
+           }).fadeTo(1000,0.5);
+           
+           $('.popup').show(1000);
+           
+      }
+      
+        //open 이란 class 하나만 있으면 모든걸 불러올수있게 하는것.
+       function blindFn(){
+           var bl_Tag = "";
+           
+           bl_Tag += '<div class="blind">';
+           bl_Tag += '</div>';
+                                                                //-> 붙여넣기
+           $('body').prepend(bl_Tag);
+           
+           //장막생성 스타일
+           $('.blind').css({
+               position:'absolute',
+               backgroundColor:'#000',
+               left:0,
+               right:0,
+               top:0,
+               bottom:0,
+               display:'none'
+           }).fadeTo(1000,0.5);
+           
+           
+       }
+      
+           // 팝업타겟 가운데로 배치 하는법
+           function centerPosition(target){
+           target.css({
+               left:"50%",
+               marginLeft:function(){
+                   
+                   var aa = $(this).css('width');           //this가 width
+                   return -parseInt(aa)/2 + 'px';           // -250px
+                   
+               },
+               top:"50%",
+               marginTop:function(){
+                   
+                   var aa = $(this).css('height');
+                   return -parseInt(aa)/2 + 'px';
+                   
+               }
+           })
+           
+           
+           
+           
+       }
+       
+      //닫기
+      var closeEvent = function(){
+          $('.blind').remove();
+          $('.popup').hide(1000);
+          
+          $('closebtn').remove();
+                
+      }
+            $('.blind').fadeOut(1000,function(){
+                $(this).remove();
+            })
+            
+        var openPopUp = function(){
+            var id = $(this).attr('id');
+            blindFn();                           //막생성
+            popMaker('id');                    //팝생성        //팝위치
+            $('.popup').show(1000);         //보여주기
+            
+        }
+        
+       
+      //클릭이벤트 장막
+        $('.open').click(openPopUp);                         //콜백. 오픈함수를 넣는것
+        $('body').on('click','closebtn',closeEvent);        
+      //닫기 이벤트
+      $('.closebtn').click(closeEvent);
+       
+       
+       
+    });
+    </script>
+    <style type="text/css">
+        .popup{
+            width: 500px; height: 500px; 
+            background-color:#fff;
+            position:absolute;
+            top:30%;
+            left:40%;
+            z-index:1;
+            display:none;
+        }
+        .blind{
+            position:'absolute';
+            background-color:'#000';
+            left:0;
+            right:0;
+            bottom:0;
+            display:none;
+        }
+        
+        .pop1{width:600px; height:600px; display:none;}
+        .pop2{width:200px; height:200px; display:none;}
+        .pop3{width:300px; height:600px; display:none;}
+        .pop4{width:700px; height:600px; display:none;}
+        
+        .popup.pop1 .wrap{color:#F00;}
+        .popup.pop2 .wrap{color:#FF0;}
+        .popup.pop3 .wrap{color:#F0F;}
+        .popup.pop4 .wrap{color:#0F0;}
+        
+    </style>
+</head>
+<body>
+    
+    <button class="open">열어</button>
+    <!--                                                        //open 이란 class 하나만 있으면 모든걸 불러올수있게 하는것.후에-->
+    <div class="popup">                                         //에서 div를 지워준다.
+            <button class="closebtn">닫기</button>
+            
+            <button class="open" id= "pop1">열어</button>
+            <button class="open" id= "pop1">열어</button>
+            <button class="open" id= "pop1">열어</button>
+            <button class="open" id= "pop1">열어</button>
+            
+            <div class="pop1">
+                <div class="wrap">
+            <button>확인</button>
+            AAAA
+            </div>
+        </div>
+        <div class="pop2"> 
+        <div class="wrap">
+            BBBB
+            <button>확인</button>
+         </div>  
+    </div>
+    <div class="pop3"> 
+        <div class="wrap">
+            CCCC
+        <button>확인</button>
+         </div>  
+    </div>
+    <div class="pop4"> 
+        <div class="wrap">
+            DDDD
+        <button>확인</button>
+         </div>  
+    </div>
+    
+</body>
+</html>
