@@ -5,112 +5,88 @@ $(function(){
 /*메뉴바 슬라이드*/    
     $(function(){
                 $('.wrapper').fadeIn(100) 
-                $('.nav button').click(function(){
-                $(this).next('ul').slideToggle(300)
-                        })
-                        $(window).resize(function(){
-                            if($(this).width() < 800){
-                                $('.nav ul').css('display','none')
-                            }else if($(this).width() > 779){
-                                $('.nav ul').css('display','block')
-                            }
-                        });
-                });    
+                    $('.nav button').click(function(){
+                        $(this).next('ul').slideToggle(300)
+                                })
+                                $(window).resize(function(){
+                                    if($(this).width() < 800){
+                                        $('.nav ul').css('display','none')
+                                    }else if($(this).width() > 779){
+                                        $('.nav ul').css('display','block')
+                                    }
+                                });
+                        });    
 
         
     
 /*images-popupStart*/
 
-$(function(){
-      //장막이벤트내용
-       
-        
-        function popMaker(id){              //popMaker(id)를 실행해라
-            
-            var contents = $('.'+id).html();    //contents 안에 클래스와 아이디가 있는 html를 추가또는 변경할수있다.
-
-            var tag = "";       //"" 안에 있는 태그라는 변수
-            tag+='<div class="popup '+id+'">';
-            tag+='<button class="closebtn">닫기</button>';
-            tag+='<div class="content">';
-           
-            tag+='</div>';
-            tag+='</div>';
-            
-            $('body').append(tag);
-            $
-            $('body').children('.popup').children('contents').append('text.html pop1')
-            
-            centerPosition($('.'+id));
-        }
-        
-       
-   function blindFn(){
-       var bl_Tag = "";
-       
-       bl_Tag += '<div class="blind">';
-       bl_Tag += '</div>';
-       
-       $('body').prepend(bl_Tag);
-       
-       //장막생성 스타일
-       $('.blind').css({
-           position:'absolute',
-           backgroundColor:'#000',
-           left:0,
-           right:0,
-           top:0,
-           bottom:0,
-           display:'none'
-       }).fadeTo(1000,0.5);
-   }
-   
-   function centerPosition(target){
-           target.css({
-               left:"50%",
-               marginLeft:function(){
-                   
-                   var aa = $(this).css('width');
-                   return -parseInt(aa)/2 + 'px';
-                   
-               },
-               top:"50%",
-               marginTop:function(){
-                   
-                   var aa = $(this).css('height');
-                   return -parseInt(aa)/2 + 'px';
-                   
-               }
-           })
-           
-       }
-       
-       //닫기
-        var closeEvent = function(){
-            //$('.blind').remove();
-            $('.popup').fadeOut(1000,function(){
-                $(this).remove()
+    $(document).ready(function(){
+    
+        $('.photo > li > a').click(function(){
+            $('html, body').animate({
+                'scrollTop':0
+            },0)
+    
+            var imgAttr = $(this).parent().index()+1;
+    
+            var blind = $(function(){
+                var bl_Tag = "";
+                    bl_Tag += '<div class="blind">';
+                    bl_Tag += '</div>';
+    
+                $('body').prepend(bl_Tag);
+    
+                $('.blind').css({
+                    display:'block'
+                }).show(0,1);
+                centerPosition($('.popup'))
+    
+                $('.popup').show(100);
             })
-            $('.blind').fadeOut(1000,function(){
-                $(this).remove()
+    
+            var imgidx = "../images/bic_pic/bic_pic_"+ imgAttr +".jpg";
+    
+            $('.popup_content .img').css({
+                background:'rgba(0,0,0,0) url(' + imgidx+ ') no-repeat center center',
+                backgroundSize:'contain'
             })
-        }
-       
-       var openPopUp = function(){
-           var id = $(this).attr('id');
-           blindFn(); // 막생성
-           popMaker(id); // 팝생성 //팝위치
-           $('.popup').show(1000); //보여주기
-        }
-        
-     
-       
-       //클릭이벤트 장막
-        $('.open').click(openPopUp);
-        
-        $('body').on('click','.closebtn',closeEvent);
-     });
+    
+        });
 
+    function centerPosition(target){
+
+        target.css({
+            left:'50%',
+            marginLeft:function(){
+                var aa = $('.popup').css('width');
+                return -parseInt(aa)/2+'px';
+            },
+            top:'50%',
+            marginTop:function(){
+                var bb = $('.popup').css('height');
+                return -parseInt(bb)/2 + 'px';
+            }
+        });
+    }
+
+    var closeEvent = function(){
+
+        $('.popup').hide(100);
+        $('.blind').hide(0,function(){
+            $(this).remove();
+        });
+    };
+
+    $('.close_btn').click(function(){
+        closeEvent();
+    })
+    $('.img').click(function(){
+        closeEvent();
+    })
+
+
+});
 /*images-popupEnd*/
 });
 /*functionEnd*/

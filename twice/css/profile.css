@@ -11,6 +11,8 @@
             background:url(../images/tp_1.jpg);
             background-repeat: no-repeat;
             -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
             background-size:cover;
             background-position: center;
             
@@ -29,6 +31,9 @@
             }
     
         .wrapper .logo:hover{
+            -webkit-transform:scale(1.2,1.2);
+            -moz-transform:scale(1.2,1.2);
+            -o-transform:scale(1.2,1.2);
             transform:scale(1.2,1.2);
             opacity:0;
             }
@@ -41,7 +46,13 @@
             top:0;
             height:100px; 
             background-color:rgba(255,255,255,0.7);
+            -webkit-box-shadow:0 2px 5px #000;
+            -moz-box-shadow:0 2px 5px #000;
+            -o-box-shadow:0 2px 5px #000;
             box-shadow:0 2px 5px #000;
+            -webkit-transition:1s;
+            -moz-transition:1s;
+            -o-transition:1s;
             transition:1s;
             position:absolute;
             overflow:hidden;
@@ -82,17 +93,26 @@
         
         .wrapper .thumbnails_wrapper:hover {
             opacity: 1;
+            -webkit-transition:1s;
+            -moz-transition:1s;
+            -o-transition:1s;
             transition:1s;
             }
         
         .wrapper .thumbnails_wrapper .content img {
             opacity: 0.5;
+            -webkit-filter:alpha(opacity=30);
+            -moz-filter:alpha(opacity=30);
+            -o-filter:alpha(opacity=30);
             filter:alpha(opacity=30);
             }
 
         .wrapper .header .nav li a{
             padding:0 15px;
             display:block;
+            -webkit-transition:0.3s;
+            -moz-transition:0.3s;
+            -o-transition:0.3s;
             transition:0.3s;
             text-decoration:none;
             font-size:1.5em;
@@ -114,10 +134,16 @@
             background-image: url(../images/logo-s.png);
             background-repeat: no-repeat;
             background-position: center;
+            -webkit-transition:1s;
+            -moz-transition:1s;
+            -o-transition:1s;
             transition:1s;
             }
         
         .wrapper .header .mark a:hover{
+            -webkit-transform:rotateY(180deg);
+            -moz-transform:rotateY(180deg);
+            -o-transform:rotateY(180deg);
             transform:rotateY(180deg);
             padding-bottom:5px;
             }
@@ -145,6 +171,9 @@
             top: 50%;
             margin: -25px 10px 0 10px;
             z-index: 3;
+            -webkit-filter:alpha(opacity=30);
+            -moz-filter:alpha(opacity=30);
+            -o-filter:alpha(opacity=30);
             filter: alpha(opacity=40);
             -moz-opacity: 0.4;
             -khtml-opacity: 0.4;
@@ -161,6 +190,9 @@
             top: 50%;
             margin: -25px 10px 0 10px;
             z-index: 3;
+            -webkit-filter:alpha(opacity=30);
+            -moz-filter:alpha(opacity=30);
+            -o-filter:alpha(opacity=30);
             filter: alpha(opacity=40);
             -moz-opacity: 0.4;
             -khtml-opacity: 0.4;
@@ -221,10 +253,16 @@
             .wrapper .header .mark a{
                 padding:0;
                 height:45px;
+                -webkit-transform:scale(0.6,0.6);
+                -moz-transform:scale(0.6,0.6);
+                -o-transform:scale(0.6,0.6);
                 transform:scale(0.6,0.6);
             }
             .wrapper .header .mark a:hover{
                 padding:0; height:44px;
+                -webkit-transform:scale(0.6,0.6) rotateY(180deg);
+                -moz-transform:scale(0.6,0.6) rotateY(180deg);
+                -o-transform:scale(0.6,0.6) rotateY(180deg);
                 transform:scale(0.6,0.6) rotateY(180deg);
             }
             .wrapper .header .nav button{
@@ -291,6 +329,9 @@
             }
             
             .wrapper .footer{
+                -webkit-transition:1s;
+                -moz-transition:1s;
+                -o-transition:1s;
                 transition:1s;
                 background-color:rgba(0,0,0,0.6);
                 
